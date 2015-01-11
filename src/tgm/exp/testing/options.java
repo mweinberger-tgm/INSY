@@ -29,6 +29,7 @@ public class options {
 		Auf diese Art lassen sich die OptionValues nicht auslesen!
 		*/
 		
+		//Hier bietet sich eine Factory an!
 		exporter.addOption( "help", false, "Ruft die Hilfe auf.");
 		exporter.addOption(OptionBuilder.withDescription("Hostname des DBMS").withValueSeparator(' ').hasArg().create("h"));
 		exporter.addOption(OptionBuilder.withDescription("Benutzername").withValueSeparator(' ').hasArg().create("u"));
