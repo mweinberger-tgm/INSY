@@ -9,8 +9,6 @@ import java.sql.*;
  * 
  * @author Michael Weinberger 4AHITT
  * @see http://www.tutorialspoint.com/jdbc/jdbc-quick-guide.htm
- * 
- * Auf der Seite wurde alles gut & vor allem verstaendlich erklaert.
  *
  */
 public class readDB {
