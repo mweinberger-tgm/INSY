@@ -1,6 +1,5 @@
 package tgm.exp.build;
 
-import javax.swing.*;
 import org.apache.commons.cli.*;
 
 /**
@@ -94,6 +93,38 @@ public class cliParser {
 		
 		if (cmd.hasOption("p")) {
 			password = cmd.getOptionValue("p"); //Prompt!!
+		}
+		
+		if (cmd.hasOption("d")) {
+			database = cmd.getOptionValue("d");
+		}
+		
+		if (cmd.hasOption("T")) {
+			tablename = cmd.getOptionValue("T");
+		}
+		
+		if (cmd.hasOption("s")) {
+			sortfield = cmd.getOptionValue("s");
+		}
+		
+		if (cmd.hasOption("r")) {
+			sortdirection = cmd.getOptionValue("r");
+		}
+		
+		if (cmd.hasOption("w")) {
+			condition = cmd.getOptionValue("w");
+		}
+		
+		if (cmd.hasOption("t")) {
+			delimiter = cmd.getOptionValue("t");
+		}
+		
+		if (cmd.hasOption("f")) {
+			toconsole = cmd.getOptionValue("f");
+		}
+		
+		if (cmd.hasOption("o")) {
+			tofile = cmd.getOptionValue("o");
 		}
 	}
 
