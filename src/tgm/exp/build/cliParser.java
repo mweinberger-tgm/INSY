@@ -127,6 +127,13 @@ public class cliParser {
 			tofile = cmd.getOptionValue("o");
 		}
 	}
+	
+	/**
+	 * 
+	 */
+	public String SelectAssemble() {
+		return null;
+	}
 
 	/**
 	 * @return the hostname

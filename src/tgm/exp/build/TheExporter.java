@@ -4,7 +4,7 @@ package tgm.exp.build;
  * 
  * 
  * 
- * @author Michael
+ * @author Michael Weinberger 4AHITT
  *
  */
 public class TheExporter {
