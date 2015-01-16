@@ -25,7 +25,7 @@ public class cliParser {
 	private String sortdirection = "ASC";
 	private String condition = "";
 	private String delimiter = ";";
-	private String toconsole = "";
+	private boolean toconsole;
 	private String tofile = "";
 	
 	
@@ -120,8 +120,7 @@ public class cliParser {
 		}
 		
 		if (cmd.hasOption("f")) {
-			toconsole = cmd.getOptionValue("f");
-		}
+			toconsole = true;		}
 		
 		if (cmd.hasOption("o")) {
 			tofile = cmd.getOptionValue("o");
@@ -201,7 +200,7 @@ public class cliParser {
 	/**
 	 * @return the toconsole
 	 */
-	public String getToconsole() {
+	public boolean getToconsole() {
 		return toconsole;
 	}
 
@@ -215,9 +214,7 @@ public class cliParser {
 	public static void main(String[] args) {
 		cliParser temp = new cliParser(args);
 		temp.initArgs();
-		
-		System.out.println(temp.getPassword());
-		
+				
 		System.exit(0);
 	}
 }
