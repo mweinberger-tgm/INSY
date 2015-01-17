@@ -112,7 +112,6 @@ public class databaseConn {
 			select = select +" ORDER BY "+sortfield +" " +sortdirection;
 		}
 
-		System.out.println(select);
 	}
 
 	/**
