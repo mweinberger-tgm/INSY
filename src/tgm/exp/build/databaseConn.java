@@ -104,11 +104,11 @@ public class databaseConn {
 
 		select = "SELECT " + list + " FROM " + tablename;
 		
-		if(condition != null || condition.equals("") != true) {
+		if(condition.equals("") == false) {
 			select = select + " WHERE "+ condition;
 		}
 		
-		if(sortfield != null || sortdirection != null) {
+		if(sortfield.equals("") == false) {
 			select = select +" ORDER BY "+sortfield +" " +sortdirection;
 		}
 
@@ -184,6 +184,7 @@ public class databaseConn {
 			System.out.println("\nProgramm wird beendet.");
 			System.exit(0);
 		} else if (tofile != null) {
+			//http://www.javabeginners.de/Dateien_und_Verzeichnisse/In_Textdatei_schreiben.php
 			System.out.println("Ausgabe wird im File "+tofile+".txt gespeichert.");
 			
 			PrintWriter pWriter = null; 
