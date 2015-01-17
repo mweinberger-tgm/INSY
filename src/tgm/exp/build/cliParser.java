@@ -87,6 +87,7 @@ public class cliParser {
 		if (cmd.hasOption("help")) {
 			HelpFormatter hilfe = new HelpFormatter();
 			hilfe.printHelp("The Exporter", param);
+			System.exit(0);
 		}
 		
 		if (cmd.hasOption("h")) {
