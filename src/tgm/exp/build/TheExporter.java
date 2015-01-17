@@ -2,9 +2,10 @@ package tgm.exp.build;
 
 /**
  * 
- * 
+ * Hier wird nur ein Objekt der Klasse erstellt, die den Programmverlauf bestimmt.
  * 
  * @author Michael Weinberger 4AHITT
+ * @version 1.0
  *
  */
 public class TheExporter {

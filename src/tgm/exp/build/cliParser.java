@@ -9,7 +9,6 @@ import org.apache.commons.cli.*;
  * Liest die Parameter aus der Konsole mithilfe der Apache Commons CLI-Library ein und leitet die gegebenen Werte weiter.
  * 
  * @author Michael Weinberger 4AHITT
- * @see tgm.exp.testing/options.java
  *
  */
 public class cliParser {
