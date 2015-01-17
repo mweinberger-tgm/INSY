@@ -9,6 +9,6 @@ package tgm.exp.build;
  */
 public class TheExporter {
 	public static void main(String[] args) {
-		
+		databaseConn run = new databaseConn(args);
 	}
 }

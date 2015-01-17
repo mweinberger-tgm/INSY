@@ -1,5 +1,7 @@
 package tgm.exp.build;
 
+import javax.swing.*;
+
 import org.apache.commons.cli.*;
 
 /**
@@ -25,15 +27,16 @@ public class cliParser {
 	private String sortdirection = "ASC";
 	private String condition = "";
 	private String delimiter = ";";
-	private boolean toconsole;
-	private String tofile = "";
+	private String list = "";
+	private String tofile = null;
 	
 	
 	/**
 	 * 
+	 * Erstellt ein neues cliParser-Objekt und nimmt die Parameter inklusive Werte entgegen.
 	 * 
+	 * @param args Die Parameter mit ihren (wenn gegebenen) Werten in einem String-Array
 	 * 
-	 * @param args
 	 */
 	public cliParser(String[] args) {
 		this.param= new Options();
@@ -42,7 +45,7 @@ public class cliParser {
 	
 	/**
 	 * 
-	 * Der OptionBuilder moechte eigentlich static aufgerufen werden, funktioniert aber wie im Entwickler-Beispiel gezeigt.
+	 * Mithilfe der ArgumentFactory werden die zulaessigen Parameter initaisiert.
 	 * 
 	 */
 	public void initArgs() {
@@ -52,6 +55,7 @@ public class cliParser {
 		param.addOption(fac.getArgument("h"));
 		param.addOption(fac.getArgument("u"));
 		param.addOption(fac.getArgument("p"));
+		param.addOption(fac.getArgument("P"));
 		param.addOption(fac.getArgument("d"));
 		param.addOption(fac.getArgument("T"));
 		param.addOption(fac.getArgument("s"));
@@ -65,7 +69,7 @@ public class cliParser {
 		try {
 			cmd = parser.parse(param, args);
 		} catch (ParseException e) {
-			System.out.println("Das Parsen ist fehlgeschlagen! " +e.getMessage());
+			System.out.println("Das Parsen ist fehlgeschlagen! Bei folgendem Parameter kam es zu einem Fehler: " +e.getMessage());
 			System.exit(1);
 		}
 		
@@ -74,9 +78,12 @@ public class cliParser {
 	
 	/**
 	 * 
+	 * Wenn die Argumente auf der Konsole gegeben sind, so wird entschieden, wie diese weiterverwendet werden.
+	 * Die meisten Argumente benoetigen einen Wert, dieser wird in eine Variable gespeichert, die von den untenstehenden Getter-Methoden bekommenw werden koennen.
+	 * Manche Parameter brauchen keine Werte, wie etwa -help, wo gleich die Routine ausgefuehrt wird. 
+	 * 
 	 */
 	public void getValues() {
-		//passwortprompt
 		
 		if (cmd.hasOption("help")) {
 			HelpFormatter hilfe = new HelpFormatter();
@@ -92,7 +99,22 @@ public class cliParser {
 		}
 		
 		if (cmd.hasOption("p")) {
-			password = cmd.getOptionValue("p"); //Prompt!!
+			password = cmd.getOptionValue("p");
+		}
+		
+		if (cmd.hasOption("P")) {
+			//see http://stackoverflow.com/questions/8881213/joptionpane-to-get-password
+			JPasswordField pf = new JPasswordField();
+			int okCxl = JOptionPane.showConfirmDialog(null, pf, "Geben sie ihr Passwort ein!", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+
+			String tmp = new String(pf.getPassword()); 
+			
+			if (okCxl == JOptionPane.OK_OPTION && tmp.equals("") == false) {
+			  password = tmp;
+			} else {
+				System.err.println("Fehlerhaftes Passwort");
+				System.exit(1);
+			}
 		}
 		
 		if (cmd.hasOption("d")) {
@@ -120,18 +142,12 @@ public class cliParser {
 		}
 		
 		if (cmd.hasOption("f")) {
-			toconsole = true;		}
+			list = cmd.getOptionValue("f");		
+		}
 		
 		if (cmd.hasOption("o")) {
 			tofile = cmd.getOptionValue("o");
 		}
-	}
-	
-	/**
-	 * 
-	 */
-	public String SelectAssemble() {
-		return null;
 	}
 
 	/**
@@ -200,8 +216,8 @@ public class cliParser {
 	/**
 	 * @return the toconsole
 	 */
-	public boolean getToconsole() {
-		return toconsole;
+	public String getList() {
+		return list;
 	}
 
 	/**
@@ -211,10 +227,4 @@ public class cliParser {
 		return tofile;
 	}
 	
-	public static void main(String[] args) {
-		cliParser temp = new cliParser(args);
-		temp.initArgs();
-				
-		System.exit(0);
-	}
 }

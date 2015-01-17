@@ -13,7 +13,7 @@ import tgm.exp.build.cliParser;
  */
 public class TestCLI {
 	cliParser temp;
-	String args[] = {"-h", "projekte.tgm.ac.at", "-u", "test", "-p", "test", "-d", "megamarkt", "-T", "produkt", "-s", "titel,preis", "-r", "DESC", "-w", "preis > 4", "-t", "$", "-f", "-o", "ausgabe.txt"};
+	String args[] = {"-h", "projekte.tgm.ac.at", "-u", "test", "-p", "test", "-d", "megamarkt", "-T", "produkt", "-s", "titel,preis", "-r", "DESC", "-w", "preis > 4", "-t", "$", "-f", "sname", "-o", "ausgabe.txt"};
 	
 	@Before
 	public void setup()	{
@@ -67,13 +67,19 @@ public class TestCLI {
 	}
 	
 	@Test
-	public void testToConsole()	{
-		assertEquals(temp.getToconsole(), "");
+	public void testList()	{
+		assertEquals(temp.getList(), "sname");
 	}
 	
 	@Test
 	public void testToFile()	{
 		assertEquals(temp.getTofile(), "ausgabe.txt");
 	}
+	
+	/*
+	@Test
+	public void testgetPasswordPrompt()	{
+		assertEquals(temp.getPassword(), "root123");
+	}*/
 	
 }
