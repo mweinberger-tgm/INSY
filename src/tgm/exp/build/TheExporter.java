@@ -10,6 +10,11 @@ package tgm.exp.build;
  */
 public class TheExporter {
 	public static void main(String[] args) {
+		if (args.length == 0) {
+			System.err.println("Bitte geben Sie Zeilenargumente an!");
+			System.exit(1);
+		}
+		
 		databaseConn run = new databaseConn(args);
 	}
 }
