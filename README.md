@@ -18,31 +18,31 @@ Siehe eLearning (http://bit.ly/1BJkaSx).
 Relationenmodell
 ====
 
-Person(key, name, geburtsdatum)
+Person(*key*, name, geburtsdatum)
 
-Segler(key: Person.key)
+Segler(*key: Person.key*)
 
-Trainer(key: Person.key) 
+Trainer(*key: Person.key*) 
 
-Boot(id, name, personen, tiefgang) 
+Boot(*id*, name, personen, tiefgang) 
 
-Tourenboot(id: Boot.id, bootsklasse) 
+Tourenboot(*id: Boot.id*, bootsklasse) 
 
-Sportboot(id: Boot.id, segelflaeche) 
+Sportboot(*id: Boot.id*, segelflaeche) 
 
-Mannschaft(name, aklasse, key: Trainer.key) 
+Mannschaft(*name*, aklasse, key: Trainer.key) 
 
-Regatta(name, jahr, land) 
+Regatta(*name, jahr*, land) 
 
-Wettfahrt(name: Regatta.name, jahr: Regatta.jahr, datum, laenge) 
+Wettfahrt(*name: Regatta.name, jahr: Regatta.jahr, datum*, laenge) 
 
-bildet(key: Segler.key, name: Mannschaft.name)
+bildet(*key: Segler.key, name: Mannschaft.name*)
 
-zugewiesen(id: Boot.id, name: Mannschaft.name)
+zugewiesen(*id: Boot.id, name: Mannschaft.name*)
  
-nimmt_teil(mname: Mannschaft.name, rname: Regatta.name, rjahr: Regatta.jahr, sportboot: Sportboot.id, startnr) 
+nimmt_teil(*mname: Mannschaft.name, rname: Regatta.name, rjahr: Regatta.jahr, sportboot: Sportboot.id*, startnr) 
 
-erzielt(mname: Mannschaft.name, wname: Wettfahrt.name, wjahr: Wettfahrt.jahr, wdatum: Wettfahrt.datum, punkte)
+erzielt(*mname: Mannschaft.name, wname: Wettfahrt.name, wjahr: Wettfahrt.jahr, wdatum: Wettfahrt.datum*, punkte)
 
 SQL Abfragen
 ====
@@ -85,4 +85,4 @@ Bei Problemen mit dem Create-Script und den Inserts kann ein Example-Set bei den
 
 (c) Markus Pichlmair; adaptiert bei Michael Borko und Erhard List
 
-INSY Michael Weinberger 4AHITT 2014/2015
+INSY Michael Weinberger 4AHIT 2014/2015
