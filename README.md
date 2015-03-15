@@ -15,6 +15,8 @@ ER-Diagramm
 ====
 Siehe eLearning (http://bit.ly/1BJkaSx).
 
+![alt text](http://bit.ly/1BJkaSx)
+
 Relationenmodell
 ====
 
