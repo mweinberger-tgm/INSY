@@ -15,7 +15,7 @@ ER-Diagramm
 ====
 Siehe eLearning (http://bit.ly/1BJkaSx).
 
-![ER-Diagramm](http://bit.ly/1BJkaSx)
+![ER-Diagramm](https://elearning.tgm.ac.at/pluginfile.php/47129/mod_assign/intro/segeln.jpg)
 
 Relationenmodell
 ====
