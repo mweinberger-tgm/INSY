@@ -18,17 +18,22 @@ Siehe eLearning (http://bit.ly/1BJkaSx).
 Relationenmodell
 ====
 
-Person(key, name, geburtsdatum) 
-Segler(key: Person.key) 
+Person(key, name, geburtsdatum)
+
+Segler(key: Person.key)
+
 Trainer(key: Person.key) 
 
 Boot(id, name, personen, tiefgang) 
+
 Tourenboot(id: Boot.id, bootsklasse) 
+
 Sportboot(id: Boot.id, segelflaeche) 
 
 Mannschaft(name, aklasse, key: Trainer.key) 
 
 Regatta(name, jahr, land) 
+
 Wettfahrt(name: Regatta.name, jahr: Regatta.jahr, datum, laenge) 
 
 bildet(key: Segler.key, name: Mannschaft.name)
