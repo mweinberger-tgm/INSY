@@ -1,8 +1,9 @@
 Segelverein
 ====
 Sie erhalten den Auftrag für den Europäischen Dachverband der Segelvereine eine Datenbank zu implementieren.
-====
+
 Beschreibung
+====
 
 Für Segler und Trainer sind Name (NAME) und Geburtsdatum (GEBURTSDATUM) bekannt. Sie werden beide identifiziert duch eine eindeutige Nummer (KEY). Mindestens zwei Segler, maximal jedoch vier Segler bilden eine Mannschaft. Für jede Mannschaft wird ein eindeutiger Name (NAME) und eine Altersklasse (AKLASSE) gespeichert. Jede Mannschaft wird genau von einem Trainer betreut. Ein Trainer kann jedoch mehrere Mannschaften betreuen.
 
