@@ -45,6 +45,7 @@ nimmt_teil(*mname: Mannschaft.name, rname: Regatta.name, rjahr: Regatta.jahr, sp
 erzielt(*mname: Mannschaft.name, wname: Wettfahrt.name, wjahr: Wettfahrt.jahr, wdatum: Wettfahrt.datum*, punkte)
 
 
+
 Primary Keys kursiv dargestellt.
 
 SQL Abfragen
