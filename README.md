@@ -31,9 +31,12 @@ Mannschaft(name, aklasse, key: Trainer.key)
 Regatta(name, jahr, land) 
 Wettfahrt(name: Regatta.name, jahr: Regatta.jahr, datum, laenge) 
 
-bildet(key: Segler.key, name: Mannschaft.name) 
-zugewiesen(id: Boot.id, name: Mannschaft.name) 
+bildet(key: Segler.key, name: Mannschaft.name)
+
+zugewiesen(id: Boot.id, name: Mannschaft.name)
+ 
 nimmt_teil(mname: Mannschaft.name, rname: Regatta.name, rjahr: Regatta.jahr, sportboot: Sportboot.id, startnr) 
+
 erzielt(mname: Mannschaft.name, wname: Wettfahrt.name, wjahr: Wettfahrt.jahr, wdatum: Wettfahrt.datum, punkte)
 
 SQL Abfragen
