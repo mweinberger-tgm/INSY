@@ -1,6 +1,9 @@
 --Michael Weinberger 4AHIT, erstellt am 18.03.2015
 --modelliert nach Vorgabe des RM
 
+--TODO!!
+--Constraints einfuegen, Fehler beheben!
+
 --Anfangs war hier bei denkbaren kleineren Zahlen Smallint enthalten, wie etwa die Startnummer
 --Angesichts der Tatsache, dass 10.000 bis 100.000 DS eingefuegt werden sollen ist dies nicht mehr sinnvoll.
 --=> umgeaendert auf Integer
