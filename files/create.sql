@@ -1,4 +1,4 @@
---Michael Weinberger 4AHIT
+--Michael Weinberger 4AHIT, erstellt am 18.03.2015
 
 CREATE TABLE Boot(
 	tiefgang DECIMAL,
@@ -22,6 +22,14 @@ CREATE TABLE Person(
 	key SERIAL PRIMARY KEY,
 	name VARCHAR(50),
 	geburtsdatum DATE
+);
+
+CREATE TABLE Trainer(
+		
+);
+
+CREATE TABLE Segler(
+	key SERIAL REFERENCES Person(key) PRIMARY KEY	
 );
 
 CREATE TABLE zugewiesen( 
