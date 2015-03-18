@@ -17,12 +17,15 @@ CREATE TABLE Sportboot(
 	id INTEGER PRIMARY KEY REFERENCES Boot(id)
 );
 
+--Serial ist unter Postgres Auto Increment!
 CREATE TABLE Person(
-	key
+	key SERIAL PRIMARY KEY,
+	name VARCHAR(50),
+	geburtsdatum DATE
 );
 
 CREATE TABLE zugewiesen( 
 	id INTEGER REFERENCES Boot(id),
-	name VARCHAR(50) REFERENCES Mannschaft(name),
+	name VARCHAR(100) REFERENCES Mannschaft(name),
 	PRIMARY KEY(id, name)
 );
