@@ -1,6 +1,10 @@
 --Michael Weinberger 4AHIT, erstellt am 18.03.2015
 --modelliert nach Vorgabe des RM
 
+--Anfangs war hier bei denkbaren kleineren Zahlen Smallint enthalten, wie etwa die Startnummer
+--Angesichts der Tatsache, dass 10.000 bis 100.000 DS eingefuegt werden sollen ist dies nicht mehr sinnvoll.
+--=> umgeaendert auf Integer
+
 --Serial ist unter Postgres Auto Increment!
 CREATE TABLE Person(
 	key SERIAL PRIMARY KEY,
@@ -21,7 +25,7 @@ CREATE TABLE Trainer(
 CREATE TABLE Boot(
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(100),
-	personen SMALLINT,
+	personen INTEGER,
 	tiefgang DECIMAL	
 );
 
@@ -47,17 +51,17 @@ CREATE TABLE Mannschaft(
 
 --/////
 
---land im Laendercode, z.B. AT, DE, CH
+--'land' im Laendercode, z.B. AT, DE, CH
 CREATE TABLE Regatta(
 	name VARCHAR(50),
-	jahr SMALLINT,
+	jahr INTEGER,
 	land VARCHAR(2), 
 	PRIMARY KEY(name, jahr)
 );
 
 CREATE TABLE Wettfahrt(
 	name VARCHAR(50) REFERENCES Regatta(name),
-	jahr SMALLINT REFERENCES Regatta(jahr),
+	jahr INTEGER REFERENCES Regatta(jahr),
 	datum DATE,
 	laenge DECIMAL,
 	PRIMARY KEY (name, jahr, datum)
@@ -79,9 +83,16 @@ CREATE TABLE zugewiesen(
 
 CREATE TABLE nimmt_teil(
 	mname VARCHAR(50) REFERENCES Mannschaft(name),
-	rname VARCHAR(50) REFERENCES Regatta(name)
+	rname VARCHAR(50) REFERENCES Regatta(name),
+	rjahr INTEGER REFERENCES Regatta(jahr),
+	sportboot SERIAL REFERENCES Sportboot(id),
+	startnr INTEGER
 );
 
 CREATE TABLE erzielt(
-		
+	mname VARCHAR(50) REFERENCES Mannschaft(name),
+	wname VARCHAR(50) REFERENCES Wettfahrt(name),
+	wjahr INTEGER REFERENCES Wettfahrt(jahr),
+	wdatum DATE REFERENCES Wettfahrt(date),
+	punkte INTEGER
 );
