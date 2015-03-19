@@ -4,8 +4,8 @@
 --TODO!!
 --Constraints einfuegen, Fehler beheben!
 
---Anfangs war hier bei denkbaren kleineren Zahlen Smallint enthalten, wie etwa die Startnummer
---Angesichts der Tatsache, dass 10.000 bis 100.000 DS eingefuegt werden sollen ist dies nicht mehr sinnvoll.
+--Anfangs war hier bei denkbar kleineren Zahlen Smallint enthalten, wie etwa die Startnummer
+--Angesichts der Tatsache, dass 10.000 bis 100.000 DS oder mehr eingefuegt werden sollen ist dies nicht mehr sinnvoll.
 --=> umgeaendert auf Integer
 
 --Serial ist unter Postgres Auto Increment!
