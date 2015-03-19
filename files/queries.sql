@@ -7,5 +7,7 @@ SELECT mname, id FROM nimmt_teil INNER JOIN Sportboot ON nimmt_teil.sportboot=Sp
 --2.) DONE ! Wenn 2 Tabellen mit ihren PK's gejoined werden, kann alternativ auch ein NATURAL JOIN gewaehlt werden.
 SELECT name FROM Trainer INNER JOIN Person ON Trainer.key=Person.key WHERE geburtsdatum = (SELECT MIN(geburtsdatum) FROM Trainer INNER JOIN Person ON Trainer.key=Person.key);
 
---3.)
-SELECT name, geburtsdatum FROM Person NATURAL JOIN Segler NATURAL JOIN Trainer WHERE ;
+--3.) DONE!
+SELECT name, geburtsdatum FROM Person AS p NATURAL JOIN Segler NATURAL JOIN Trainer WHERE p.key NOT IN (SELECT key FROM Mannschaft);
+
+--4.)
