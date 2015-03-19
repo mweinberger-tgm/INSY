@@ -8,3 +8,4 @@ SELECT mname, id FROM nimmt_teil INNER JOIN Sportboot ON nimmt_teil.sportboot=Sp
 SELECT name FROM Trainer INNER JOIN Person ON Trainer.key=Person.key WHERE geburtsdatum = (SELECT MIN(geburtsdatum) FROM Trainer INNER JOIN Person ON Trainer.key=Person.key);
 
 --3.)
+SELECT name, geburtsdatum FROM Person NATURAL JOIN Segler NATURAL JOIN Trainer WHERE ;
