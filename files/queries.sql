@@ -10,4 +10,16 @@ SELECT name FROM Trainer INNER JOIN Person ON Trainer.key=Person.key WHERE gebur
 --3.) DONE!
 SELECT name, geburtsdatum FROM Person AS p NATURAL JOIN Segler NATURAL JOIN Trainer WHERE p.key NOT IN (SELECT key FROM Mannschaft);
 
---4.)
+--5.)
+SELECT name, jahr, COUNT(*) FROM Regatta NATURAL JOIN Wettfahrt WHERE (SELECT COUNT(*) FROM Wettfahrt) = (SELECT MIN(COUNT(*)) FROM Wettfahrt) GROUP BY name, jahr; 
+
+--6.) DONE!
+SELECT p.name FROM Person p NATURAL JOIN Trainer t INNER JOIN Mannschaft m on t.key = m.key GROUP BY p.name, t.key HAVING COUNT(m.key) >= 2;
+
+--7.)
+SELECT aklasse, COUNT(aklasse) FROM Mannschaft m NATURAL JOIN erzielt e GROUP BY aklasse;
+
+--8.)
+
+--14.)
+SELECT name, jahr, land, laenge FROM Regatta r NATURAL JOIN Wettfahrt w GROUP BY name, jahr, land, laenge HAVING laenge = MAX(laenge);
