@@ -16,9 +16,11 @@ SELECT name, geburtsdatum FROM Person AS p NATURAL JOIN Segler NATURAL JOIN Trai
 --5.)
 SELECT name, jahr, COUNT(*) FROM Regatta NATURAL JOIN Wettfahrt WHERE (SELECT COUNT(*) FROM Wettfahrt) = (SELECT MIN(COUNT(*)) FROM Wettfahrt) GROUP BY name, jahr; 
 SELECT COUNT(*) FROM Regatta NATURAL JOIN Wettfahrt GROUP BY name, jahr; --Als Subselect fuer Ermittlung des kleinsten Wertes.
+SELECT name, jahr, COUNT(*) FROM Regatta NATURAL JOIN Wettfahrt WHERE (SELECT COUNT(*) FROM Regatta NATURAL JOIN Wettfahrt GROUP BY name, jahr) = (SELECT MIN(c) FROM (SELECT COUNT(*) as c FROM Regatta NATURAL JOIN Wettfahrt GROUP BY name, jahr)) GROUP BY name, jahr;
+
 
 --6.) DONE!
---HAVING ist nicht soo schoen, aber muss halt
+--HAVING ist nicht so schoen, aber hier einer der wenigen Moeglichkeiten.
 SELECT p.name FROM Person p NATURAL JOIN Trainer t INNER JOIN Mannschaft m on t.key = m.key GROUP BY p.name, t.key HAVING COUNT(m.key) >= 2;
 
 --7.)
