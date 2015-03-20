@@ -24,7 +24,8 @@ SELECT name, jahr, COUNT(*) FROM Regatta NATURAL JOIN Wettfahrt WHERE (SELECT CO
 SELECT p.name FROM Person p NATURAL JOIN Trainer t INNER JOIN Mannschaft m on t.key = m.key GROUP BY p.name, t.key HAVING COUNT(m.key) >= 2;
 
 --7.)
-SELECT aklasse, COUNT(aklasse) FROM Mannschaft m NATURAL JOIN erzielt e GROUP BY aklasse;
+--Hat bei den meisten Wettfahrten Punkte erzielt = die meisten Punkte? Kann eine teilnehmende Mannschaft ueberhaupt 0 Punkte erzielen?
+SELECT aklasse FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse HAVING (SELECT COUNT(aklasse) FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse) = (SELECT MAX(alter) FROM (SELECT COUNT(aklasse) AS alter FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse) s);
 
 --8.)
 
