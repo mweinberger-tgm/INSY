@@ -30,5 +30,6 @@ SELECT aklasse FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP 
 
 --8.)
 
+
 --14.)
 SELECT name, jahr, land, laenge FROM Regatta r NATURAL JOIN Wettfahrt w GROUP BY name, jahr, land, laenge HAVING laenge = MAX(laenge);
