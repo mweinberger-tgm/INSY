@@ -25,11 +25,14 @@ SELECT p.name FROM Person p NATURAL JOIN Trainer t INNER JOIN Mannschaft m on t.
 
 --7.)
 --Hat bei den meisten Wettfahrten Punkte erzielt = die meisten Punkte? Kann eine teilnehmende Mannschaft ueberhaupt 0 Punkte erzielen?
-SELECT aklasse FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse HAVING (SELECT COUNT(aklasse) FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse) = (SELECT MAX(alter) FROM (SELECT COUNT(aklasse) AS alter FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse) s);
-SELECT aklasse FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse HAVING (SELECT MAX(alter) FROM (SELECT COUNT(aklasse) AS alter FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse) s)  IN (SELECT COUNT(aklasse) FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse);
+--DONE, aber verbesserungswuerdig --> auf eine Ausgabe reduzieren, die nur die Mannschaft anzeigt
+SELECT aklasse, COUNT(punkte) FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse HAVING (SELECT MAX(alter) FROM (SELECT COUNT(aklasse) AS alter FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse) s)  IN (SELECT COUNT(aklasse) FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse);
+
+--ACHTUNG, Sie muessen jetzt ganz, ganz stark sein! Das ist ein groesserer Pfusch, quick & dirty um der Aufgabenstellung zu entsprechen.
+SELECT aklasse FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse HAVING (SELECT MAX(alter) FROM (SELECT COUNT(aklasse) AS alter FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse) s)  IN (SELECT COUNT(aklasse) FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse) LIMIT 1;
 
 --8.)
 
 
---14.)
-SELECT name, jahr, land, laenge FROM Regatta r NATURAL JOIN Wettfahrt w GROUP BY name, jahr, land, laenge HAVING laenge = MAX(laenge);
+--14.) DONE!
+SELECT r.name, r.jahr, r.land FROM Regatta r NATURAL JOIN Wettfahrt w GROUP BY w.laenge, r.name, r.jahr, r.land HAVING w.laenge = (SELECT MIN(laenge) FROM Wettfahrt w);
