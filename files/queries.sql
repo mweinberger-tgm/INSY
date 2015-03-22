@@ -1,5 +1,7 @@
 --Michael Weinberger 4AHIT, erstellt am 18.03.2015
 
+--Ausgefuehrt in einer Umgebung mit einigen testweisen Inserts, Aenderungen moeglich
+
 --1.) In einer Query ???
 SELECT mname FROM nimmt_teil WHERE rjahr = 2007 AND rname = 'Bodenseeregatta';
 SELECT mname, id FROM nimmt_teil INNER JOIN Sportboot ON nimmt_teil.sportboot=Sportboot.id  WHERE rjahr = 2007 AND rname = 'Bodenseeregatta' AND segelflaeche < 20;

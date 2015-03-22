@@ -54,18 +54,18 @@ CREATE TABLE Mannschaft(
 
 --/////
 
---'land' im Laendercode, z.B. AT, DE, CH
+--'land' im Laendercode, z.B. AT, DE, CH --> Verworfen wegen Data Generator 
 CREATE TABLE Regatta(
-	name VARCHAR(50) UNIQUE,
+	name VARCHAR(50),
 	jahr INTEGER UNIQUE,
-	land VARCHAR(2), 
+	land VARCHAR(50), 
 	PRIMARY KEY(name, jahr)
 );
 
 CREATE TABLE Wettfahrt(
-	name VARCHAR(50) UNIQUE,
+	name VARCHAR(50),
 	jahr INTEGER UNIQUE,
-	datum DATE UNIQUE,
+	datum DATE,
 	laenge DECIMAL,
 	PRIMARY KEY (name, jahr, datum),
 	FOREIGN KEY (name) REFERENCES Regatta(name),
@@ -89,14 +89,14 @@ CREATE TABLE zugewiesen(
 CREATE TABLE nimmt_teil(
 	mname VARCHAR(50) REFERENCES Mannschaft(name),
 	rname VARCHAR(50) REFERENCES Regatta(name),
-	rjahr INTEGER REFERENCES Regatta(jahr),
+	rjahr INTEGER  UNIQUE REFERENCES Regatta(jahr),
 	sportboot SERIAL REFERENCES Sportboot(id),
 	startnr INTEGER
 );
 
 CREATE TABLE erzielt(
 	mname VARCHAR(50),
-	wname VARCHAR(50) UNIQUE,
+	wname VARCHAR(50),
 	wjahr INTEGER UNIQUE,
 	wdatum DATE,
 	punkte INTEGER,
