@@ -33,6 +33,8 @@ SELECT aklasse FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP 
 
 --8.)
 
+--13.) DONE!
+SELECT s.id, b.name FROM Sportboot s NATURAL JOIN Boot b GROUP BY s.id, b.name HAVING s.id NOT IN (SELECT key FROM Mannschaft) AND s.id IN (SELECT n.sportboot FROM nimmt_teil n GROUP BY n.sportboot HAVING COUNT(sportboot) > 2);
 
 --14.) DONE!
 SELECT r.name, r.jahr, r.land FROM Regatta r NATURAL JOIN Wettfahrt w GROUP BY w.laenge, r.name, r.jahr, r.land HAVING w.laenge = (SELECT MIN(laenge) FROM Wettfahrt w);
