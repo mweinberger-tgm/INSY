@@ -39,7 +39,7 @@ CREATE TABLE Tourenboot(
 );
 
 CREATE TABLE Sportboot(
-	id SERIAL REFERENCES Boot(id) PRIMARY KEY ,
+	id SERIAL REFERENCES Boot(id) PRIMARY KEY,
 	segelflaeche DECIMAL
 );
 
@@ -56,18 +56,20 @@ CREATE TABLE Mannschaft(
 
 --'land' im Laendercode, z.B. AT, DE, CH
 CREATE TABLE Regatta(
-	name VARCHAR(50),
-	jahr INTEGER,
+	name VARCHAR(50) UNIQUE,
+	jahr INTEGER UNIQUE,
 	land VARCHAR(2), 
 	PRIMARY KEY(name, jahr)
 );
 
 CREATE TABLE Wettfahrt(
-	name VARCHAR(50) REFERENCES Regatta(name),
-	jahr INTEGER REFERENCES Regatta(jahr),
-	datum DATE,
+	name VARCHAR(50) UNIQUE,
+	jahr INTEGER UNIQUE,
+	datum DATE UNIQUE,
 	laenge DECIMAL,
-	PRIMARY KEY (name, jahr, datum)
+	PRIMARY KEY (name, jahr, datum),
+	FOREIGN KEY (name) REFERENCES Regatta(name),
+	FOREIGN KEY (jahr) REFERENCES Regatta(jahr)
 );
 
 --/////
@@ -93,9 +95,13 @@ CREATE TABLE nimmt_teil(
 );
 
 CREATE TABLE erzielt(
-	mname VARCHAR(50) REFERENCES Mannschaft(name),
-	wname VARCHAR(50) REFERENCES Wettfahrt(name),
-	wjahr INTEGER REFERENCES Wettfahrt(jahr),
-	wdatum DATE REFERENCES Wettfahrt(date),
-	punkte INTEGER
+	mname VARCHAR(50),
+	wname VARCHAR(50) UNIQUE,
+	wjahr INTEGER UNIQUE,
+	wdatum DATE,
+	punkte INTEGER,
+	FOREIGN KEY (mname) REFERENCES Mannschaft(name),
+	FOREIGN KEY (wname) REFERENCES Wettfahrt(name),
+	FOREIGN KEY (wjahr) REFERENCES Wettfahrt(jahr),
+	FOREIGN KEY (wdatum) REFERENCES Wettfahrt(datum)
 );
