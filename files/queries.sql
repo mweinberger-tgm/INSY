@@ -1,6 +1,7 @@
 --Michael Weinberger 4AHIT, erstellt am 18.03.2015
 
---Ausgefuehrt in einer Umgebung mit einigen testweisen Inserts, Aenderungen moeglich
+--Ausgefuehrt in einer Umgebung mit einigen wenigen testweisen Inserts, wird noch adaptiert.
+--Fehlend: 4/5/9/12 werden implementiert, fliessen wohl nicht mehr in die Note ein, aber der Vollstaendigkeit halber.
 
 --1.) In einer Query ???
 SELECT mname FROM nimmt_teil WHERE rjahr = 2007 AND rname = 'Bodenseeregatta';
