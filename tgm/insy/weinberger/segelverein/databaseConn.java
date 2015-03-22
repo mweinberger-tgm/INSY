@@ -1,8 +1,12 @@
 package segelverein;
 
+import java.awt.*;
 import java.io.*;
 import java.net.*;
 import java.sql.*;
+import java.util.*;
+
+import javax.swing.*;
 
 /**
  * 
@@ -24,6 +28,12 @@ public class databaseConn {
 	private ResultSet rs;
 	private Statement stmt;
 	private Connection conn;
+	
+	//Vector<String> data = new Vector<String>();
+	//Vector<String> names = new Vector<String>();
+	
+	String[][] data = new String[30][10];
+	String[][] names = new String[10][10];
 
 	/**
 	 * 
@@ -45,7 +55,7 @@ public class databaseConn {
 		checkIfValidHost();
 		assembleSelect();
 		letsgoDB();
-		// initGUI();
+		initGUI();
 
 		try {
 			rs.close();
@@ -124,6 +134,8 @@ public class databaseConn {
 			while (rs.next()) {
 				for (int i = 1; i < 5; i++) {
 					String val = rs.getString(i);
+					//data.add(val);
+					data[i][0] = val;
 					System.out.print(val + "\n");
 				}
 
@@ -133,8 +145,39 @@ public class databaseConn {
 					+ e.getMessage());
 		}
 
-		System.out.println("\nProgramm wird beendet.");
-		System.exit(0);
+	}
+	
+	public void initGUI() {
+		JFrame mainframe = new JFrame();
 
+		JPanel hauptpanel = new JPanel();
+
+		hauptpanel.setLayout(new BorderLayout());
+		
+		JTable tb = new JTable(data,names);
+		
+		hauptpanel.add(tb);
+		
+		JButton create = new JButton("Create");
+		JButton insert = new JButton("Insert");
+		JButton delete = new JButton("Delete");
+		JButton update = new JButton("Update");
+		
+		JPanel buttons = new JPanel();
+		buttons.setLayout(new GridLayout(0,4));
+		
+		buttons.add(create);
+		buttons.add(insert);
+		buttons.add(delete);
+		buttons.add(update);
+		
+		hauptpanel.add(buttons, BorderLayout.SOUTH);
+		
+		mainframe.add(hauptpanel);
+		mainframe.setSize(1000, 600);
+		mainframe.setTitle("Segelverein Weinb 4AHIT");
+		mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		mainframe.setLocationRelativeTo(null);
+		mainframe.setVisible(true);
 	}
 }
