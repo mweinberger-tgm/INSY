@@ -31,7 +31,11 @@ SELECT aklasse, COUNT(punkte) FROM Mannschaft m INNER JOIN erzielt e ON m.name =
 --ACHTUNG, Sie muessen jetzt ganz, ganz stark sein! Das ist ein groesserer Pfusch, quick & dirty um der Aufgabenstellung zu entsprechen.
 SELECT aklasse FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse HAVING (SELECT MAX(alter) FROM (SELECT COUNT(aklasse) AS alter FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse) s)  IN (SELECT COUNT(aklasse) FROM Mannschaft m INNER JOIN erzielt e ON m.name = e.mname GROUP BY aklasse) LIMIT 1;
 
---8.)
+--8.) Gott vergelt's mit Limit 1.
+SELECT (SELECT AVG(tiefgang) FROM Tourenboot NATURAL JOIN Boot) - (SELECT AVG(tiefgang) FROM Sportboot NATURAL JOIN Boot) as avgtiefgang FROM Boot b LIMIT 1;
+
+--10.)
+SELECT r.land FROM Regatta r NATURAL JOIN Wettfahrt w GROUP BY r.land, w.laenge HAVING w.laenge = (SELECT MAX(laenge) FROM Wettfahrt) AND w.laenge != (SELECT MIN(laenge) FROM Wettfahrt);
 
 --11.) DONE!
 SELECT name FROM Trainer NATURAL JOIN Person GROUP BY name, key HAVING key IN (SELECT m.key FROM erzielt e INNER JOIN Mannschaft m ON m.name = e.mname GROUP BY m.key, e.punkte HAVING e.punkte = (SELECT MAX(e.punkte) FROM erzielt e));
