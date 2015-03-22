@@ -41,7 +41,7 @@ SELECT r.land FROM Regatta r NATURAL JOIN Wettfahrt w GROUP BY r.land, w.laenge 
 SELECT name FROM Trainer NATURAL JOIN Person GROUP BY name, key HAVING key IN (SELECT m.key FROM erzielt e INNER JOIN Mannschaft m ON m.name = e.mname GROUP BY m.key, e.punkte HAVING e.punkte = (SELECT MAX(e.punkte) FROM erzielt e));
 
 --12.) Betonung auf JEDE --> Auch Null-Werte erlaubt!
---Ein paar Teams fehlen noch, und zwar diese, die an sontigen Regatten teilgenommen haben.
+--Ein paar Teams fehlen noch, und zwar diese, die an sonstigen Regatten teilgenommen haben.
 SELECT m.name, e.punkte FROM erzielt e RIGHT OUTER JOIN Mannschaft m ON m.name = e.mname LEFT OUTER JOIN Regatta r ON e.wname = r.name WHERE e.punkte IS NULL OR e.wname = 'Bodenseeregatta' AND r.land = 'Oesterreich';
 
 --13.) DONE!
