@@ -57,19 +57,18 @@ CREATE TABLE Mannschaft(
 --'land' im Laendercode, z.B. AT, DE, CH --> Verworfen wegen Data Generator 
 CREATE TABLE Regatta(
 	name VARCHAR(50),
-	jahr INTEGER UNIQUE,
+	jahr INTEGER,
 	land VARCHAR(50), 
 	PRIMARY KEY(name, jahr)
 );
 
 CREATE TABLE Wettfahrt(
 	name VARCHAR(50),
-	jahr INTEGER UNIQUE,
+	jahr INTEGER,
 	datum DATE,
 	laenge DECIMAL,
 	PRIMARY KEY (name, jahr, datum),
-	FOREIGN KEY (name) REFERENCES Regatta(name),
-	FOREIGN KEY (jahr) REFERENCES Regatta(jahr)
+	FOREIGN KEY (name, jahr) REFERENCES Regatta(name, jahr)
 );
 
 --/////
@@ -86,22 +85,25 @@ CREATE TABLE zugewiesen(
 	PRIMARY KEY(id, name)
 );
 
+--Schwerer Fehler, Abbruch des Create hier ! Noch zu beheben
+--Loesung: FK zusammenfassen, PK ordentlich definieren
 CREATE TABLE nimmt_teil(
 	mname VARCHAR(50) REFERENCES Mannschaft(name),
-	rname VARCHAR(50) REFERENCES Regatta(name),
-	rjahr INTEGER  UNIQUE REFERENCES Regatta(jahr),
+	rname VARCHAR(50),
+	rjahr INTEGER,
 	sportboot SERIAL REFERENCES Sportboot(id),
-	startnr INTEGER
+	startnr INTEGER,
+	PRIMARY KEY(mname, rname, rjahr, sportboot),
+	FOREIGN KEY (rname, rjahr) REFERENCES Regatta(name, jahr)
 );
 
 CREATE TABLE erzielt(
 	mname VARCHAR(50),
 	wname VARCHAR(50),
-	wjahr INTEGER UNIQUE,
+	wjahr INTEGER,
 	wdatum DATE,
 	punkte INTEGER,
+	PRIMARY KEY(mname, wname, wjahr, wdatum),
 	FOREIGN KEY (mname) REFERENCES Mannschaft(name),
-	FOREIGN KEY (wname) REFERENCES Wettfahrt(name),
-	FOREIGN KEY (wjahr) REFERENCES Wettfahrt(jahr),
-	FOREIGN KEY (wdatum) REFERENCES Wettfahrt(datum)
+	FOREIGN KEY (wname, wjahr, wdatum) REFERENCES Wettfahrt(name, jahr, datum)
 );

@@ -26,7 +26,6 @@ INSERT INTO nimmt_teil VALUES ('Weinberger', 'Marchfeldkanal', 1991, 07, 436);
 INSERT INTO nimmt_teil VALUES ('Borko', 'Marchfeldkanal', 1991, 07, 568);
 INSERT INTO nimmt_teil VALUES ('Team Kukident', 'Marchfeldkanal', 1991, 13, 76);
 INSERT INTO nimmt_teil VALUES ('List', 'Marchfeldkanal', 1991, 19, 568);
-INSERT INTO nimmt_teil VALUES ('Weinberger', 'Marchfeldkanal', 1991, 20, 65);
 INSERT INTO nimmt_teil VALUES ('Borko', 'Marchfeldkanal', 1991, 01, 65);
 INSERT INTO nimmt_teil VALUES ('List', 'Marchfeldkanal', 1991, 05, 658);
 INSERT INTO nimmt_teil VALUES ('Weinberger', 'Marchfeldkanal', 1991, 20, 6587);
