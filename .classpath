@@ -3,5 +3,8 @@
 	<classpathentry kind="src" path="tgm/insy/weinberger"/>
 	<classpathentry kind="lib" path="doc/Segelverein_Weinb_4AHIT.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/mweinberger/Dokumente/INSY/Segelverein/commons-cli-1.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="/home/mweinberger/Dokumente/INSY/Segelverein/postgresql-9.4-1201.jdbc41.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
