@@ -5,8 +5,11 @@ Dokumentieren Sie alle Tipps aus den vorgestellten Quellen [1,2] mit ausgeführte
 Eine Herausforderung wäre die Schokofabrik-Datenbank mit den generierten 10000 Datensätzen pro Tabelle zu verwenden, dies ist aber nicht Pflicht, ersetzt aber den Einsatz der oben genannten Testdaten.
 
 [1] http://beginner-sql-tutorial.com/sql-query-tuning.htm
+
 [2] http://beginner-sql-tutorial.com/sql-tutorial-tips.htm
+
 [3] https://elearning.tgm.ac.at/mod/resource/view.php?id=33104
+
 [4] http://www.borko.at/~mike/Testdaten.zip
 
 ====
