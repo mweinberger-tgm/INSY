@@ -121,7 +121,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: borders; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: borders; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE borders (
@@ -132,10 +132,10 @@ CREATE TABLE borders (
 );
 
 
-ALTER TABLE borders OWNER TO schueler;
+ALTER TABLE borders OWNER TO pgschueler;
 
 --
--- Name: city; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: city; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE city (
@@ -151,10 +151,10 @@ CREATE TABLE city (
 );
 
 
-ALTER TABLE city OWNER TO schueler;
+ALTER TABLE city OWNER TO pgschueler;
 
 --
--- Name: continent; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: continent; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE continent (
@@ -163,10 +163,10 @@ CREATE TABLE continent (
 );
 
 
-ALTER TABLE continent OWNER TO schueler;
+ALTER TABLE continent OWNER TO pgschueler;
 
 --
--- Name: country; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: country; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE country (
@@ -181,10 +181,10 @@ CREATE TABLE country (
 );
 
 
-ALTER TABLE country OWNER TO schueler;
+ALTER TABLE country OWNER TO pgschueler;
 
 --
--- Name: desert; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: desert; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE desert (
@@ -196,10 +196,10 @@ CREATE TABLE desert (
 );
 
 
-ALTER TABLE desert OWNER TO schueler;
+ALTER TABLE desert OWNER TO pgschueler;
 
 --
--- Name: economy; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: economy; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE economy (
@@ -213,10 +213,10 @@ CREATE TABLE economy (
 );
 
 
-ALTER TABLE economy OWNER TO schueler;
+ALTER TABLE economy OWNER TO pgschueler;
 
 --
--- Name: employees; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: employees; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE employees (
@@ -233,10 +233,10 @@ CREATE TABLE employees (
 );
 
 
-ALTER TABLE employees OWNER TO schueler;
+ALTER TABLE employees OWNER TO pgschueler;
 
 --
--- Name: encompasses; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: encompasses; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE encompasses (
@@ -247,10 +247,10 @@ CREATE TABLE encompasses (
 );
 
 
-ALTER TABLE encompasses OWNER TO schueler;
+ALTER TABLE encompasses OWNER TO pgschueler;
 
 --
--- Name: ethnicgroup; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: ethnicgroup; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE ethnicgroup (
@@ -261,10 +261,10 @@ CREATE TABLE ethnicgroup (
 );
 
 
-ALTER TABLE ethnicgroup OWNER TO schueler;
+ALTER TABLE ethnicgroup OWNER TO pgschueler;
 
 --
--- Name: geo_desert; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: geo_desert; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE geo_desert (
@@ -274,10 +274,10 @@ CREATE TABLE geo_desert (
 );
 
 
-ALTER TABLE geo_desert OWNER TO schueler;
+ALTER TABLE geo_desert OWNER TO pgschueler;
 
 --
--- Name: geo_estuary; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: geo_estuary; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE geo_estuary (
@@ -287,10 +287,10 @@ CREATE TABLE geo_estuary (
 );
 
 
-ALTER TABLE geo_estuary OWNER TO schueler;
+ALTER TABLE geo_estuary OWNER TO pgschueler;
 
 --
--- Name: geo_island; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: geo_island; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE geo_island (
@@ -300,10 +300,10 @@ CREATE TABLE geo_island (
 );
 
 
-ALTER TABLE geo_island OWNER TO schueler;
+ALTER TABLE geo_island OWNER TO pgschueler;
 
 --
--- Name: geo_lake; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: geo_lake; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE geo_lake (
@@ -313,10 +313,10 @@ CREATE TABLE geo_lake (
 );
 
 
-ALTER TABLE geo_lake OWNER TO schueler;
+ALTER TABLE geo_lake OWNER TO pgschueler;
 
 --
--- Name: geo_mountain; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: geo_mountain; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE geo_mountain (
@@ -326,10 +326,10 @@ CREATE TABLE geo_mountain (
 );
 
 
-ALTER TABLE geo_mountain OWNER TO schueler;
+ALTER TABLE geo_mountain OWNER TO pgschueler;
 
 --
--- Name: geo_river; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: geo_river; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE geo_river (
@@ -339,10 +339,10 @@ CREATE TABLE geo_river (
 );
 
 
-ALTER TABLE geo_river OWNER TO schueler;
+ALTER TABLE geo_river OWNER TO pgschueler;
 
 --
--- Name: geo_sea; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: geo_sea; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE geo_sea (
@@ -352,10 +352,10 @@ CREATE TABLE geo_sea (
 );
 
 
-ALTER TABLE geo_sea OWNER TO schueler;
+ALTER TABLE geo_sea OWNER TO pgschueler;
 
 --
--- Name: geo_source; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: geo_source; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE geo_source (
@@ -365,10 +365,10 @@ CREATE TABLE geo_source (
 );
 
 
-ALTER TABLE geo_source OWNER TO schueler;
+ALTER TABLE geo_source OWNER TO pgschueler;
 
 --
--- Name: island; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: island; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE island (
@@ -384,10 +384,10 @@ CREATE TABLE island (
 );
 
 
-ALTER TABLE island OWNER TO schueler;
+ALTER TABLE island OWNER TO pgschueler;
 
 --
--- Name: islandin; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: islandin; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE islandin (
@@ -398,10 +398,10 @@ CREATE TABLE islandin (
 );
 
 
-ALTER TABLE islandin OWNER TO schueler;
+ALTER TABLE islandin OWNER TO pgschueler;
 
 --
--- Name: ismember; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: ismember; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE ismember (
@@ -411,10 +411,10 @@ CREATE TABLE ismember (
 );
 
 
-ALTER TABLE ismember OWNER TO schueler;
+ALTER TABLE ismember OWNER TO pgschueler;
 
 --
--- Name: lake; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: lake; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE lake (
@@ -432,10 +432,10 @@ CREATE TABLE lake (
 );
 
 
-ALTER TABLE lake OWNER TO schueler;
+ALTER TABLE lake OWNER TO pgschueler;
 
 --
--- Name: language; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: language; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE language (
@@ -446,10 +446,10 @@ CREATE TABLE language (
 );
 
 
-ALTER TABLE language OWNER TO schueler;
+ALTER TABLE language OWNER TO pgschueler;
 
 --
--- Name: located; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: located; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE located (
@@ -462,10 +462,10 @@ CREATE TABLE located (
 );
 
 
-ALTER TABLE located OWNER TO schueler;
+ALTER TABLE located OWNER TO pgschueler;
 
 --
--- Name: locatedon; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: locatedon; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE locatedon (
@@ -476,10 +476,10 @@ CREATE TABLE locatedon (
 );
 
 
-ALTER TABLE locatedon OWNER TO schueler;
+ALTER TABLE locatedon OWNER TO pgschueler;
 
 --
--- Name: mergeswith; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: mergeswith; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE mergeswith (
@@ -488,10 +488,10 @@ CREATE TABLE mergeswith (
 );
 
 
-ALTER TABLE mergeswith OWNER TO schueler;
+ALTER TABLE mergeswith OWNER TO pgschueler;
 
 --
--- Name: mountain; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: mountain; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE mountain (
@@ -505,10 +505,10 @@ CREATE TABLE mountain (
 );
 
 
-ALTER TABLE mountain OWNER TO schueler;
+ALTER TABLE mountain OWNER TO pgschueler;
 
 --
--- Name: mountainonisland; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: mountainonisland; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE mountainonisland (
@@ -517,10 +517,10 @@ CREATE TABLE mountainonisland (
 );
 
 
-ALTER TABLE mountainonisland OWNER TO schueler;
+ALTER TABLE mountainonisland OWNER TO pgschueler;
 
 --
--- Name: organization; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: organization; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE organization (
@@ -533,10 +533,10 @@ CREATE TABLE organization (
 );
 
 
-ALTER TABLE organization OWNER TO schueler;
+ALTER TABLE organization OWNER TO pgschueler;
 
 --
--- Name: politics; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: politics; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE politics (
@@ -547,10 +547,10 @@ CREATE TABLE politics (
 );
 
 
-ALTER TABLE politics OWNER TO schueler;
+ALTER TABLE politics OWNER TO pgschueler;
 
 --
--- Name: population; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: population; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE population (
@@ -560,10 +560,10 @@ CREATE TABLE population (
 );
 
 
-ALTER TABLE population OWNER TO schueler;
+ALTER TABLE population OWNER TO pgschueler;
 
 --
--- Name: province; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: province; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE province (
@@ -578,10 +578,10 @@ CREATE TABLE province (
 );
 
 
-ALTER TABLE province OWNER TO schueler;
+ALTER TABLE province OWNER TO pgschueler;
 
 --
--- Name: religion; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: religion; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE religion (
@@ -592,10 +592,10 @@ CREATE TABLE religion (
 );
 
 
-ALTER TABLE religion OWNER TO schueler;
+ALTER TABLE religion OWNER TO pgschueler;
 
 --
--- Name: river; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: river; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE river (
@@ -616,10 +616,10 @@ CREATE TABLE river (
 );
 
 
-ALTER TABLE river OWNER TO schueler;
+ALTER TABLE river OWNER TO pgschueler;
 
 --
--- Name: sea; Type: TABLE; Schema: public; Owner: schueler; Tablespace: 
+-- Name: sea; Type: TABLE; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE TABLE sea (
@@ -629,10 +629,10 @@ CREATE TABLE sea (
 );
 
 
-ALTER TABLE sea OWNER TO schueler;
+ALTER TABLE sea OWNER TO pgschueler;
 
 --
--- Data for Name: borders; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: borders; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY borders (country1, country2, length) FROM stdin;
@@ -960,7 +960,7 @@ MOC	SD	105
 
 
 --
--- Data for Name: city; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: city; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY city (name, country, province, population, longitude, latitude) FROM stdin;
@@ -4079,7 +4079,7 @@ Victoria	SY	Seychelles	24570	55.5	-4.65000000000000036
 
 
 --
--- Data for Name: continent; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: continent; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY continent (name, area) FROM stdin;
@@ -4092,7 +4092,7 @@ America	39872000
 
 
 --
--- Data for Name: country; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: country; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY country (name, code, capital, province, area, population) FROM stdin;
@@ -4338,7 +4338,7 @@ Seychelles	SY	Victoria	Seychelles	455	77575
 
 
 --
--- Data for Name: desert; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: desert; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY desert (name, area, longitude, latitude) FROM stdin;
@@ -4409,7 +4409,7 @@ Atacama	181300	-69.25	-24.5
 
 
 --
--- Data for Name: economy; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: economy; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY economy (country, gdp, agriculture, service, industry, inflation) FROM stdin;
@@ -4655,7 +4655,7 @@ SY	430	\N	\N	\N	3.89999999999999991
 
 
 --
--- Data for Name: employees; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: employees; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY employees (firstname, lastname, email, phone, city, province, country, hiredate, religion, language) FROM stdin;
@@ -34496,7 +34496,7 @@ Owen	Burt	Etiam.bibendum.fermentum@lobortisultrices.ca	1 49 795 2423-3466	Reykja
 
 
 --
--- Data for Name: encompasses; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: encompasses; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY encompasses (country, continent, percentage) FROM stdin;
@@ -34746,7 +34746,7 @@ SY	Africa	100
 
 
 --
--- Data for Name: ethnicgroup; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: ethnicgroup; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY ethnicgroup (country, name, percentage) FROM stdin;
@@ -35294,7 +35294,7 @@ SY	Seychellois	100
 
 
 --
--- Data for Name: geo_desert; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: geo_desert; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY geo_desert (desert, country, province) FROM stdin;
@@ -35456,7 +35456,7 @@ Atacama	RCH	Chile
 
 
 --
--- Data for Name: geo_estuary; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: geo_estuary; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY geo_estuary (river, country, province) FROM stdin;
@@ -35729,7 +35729,7 @@ Murrumbidgee River	AUS	New South Wales
 
 
 --
--- Data for Name: geo_island; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: geo_island; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY geo_island (island, country, province) FROM stdin;
@@ -36155,7 +36155,7 @@ Te Waka-a-Maui (South Island)	NZ	New Zealand
 
 
 --
--- Data for Name: geo_lake; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: geo_lake; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY geo_lake (lake, country, province) FROM stdin;
@@ -36416,7 +36416,7 @@ Lake Hume	AUS	Victoria
 
 
 --
--- Data for Name: geo_mountain; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: geo_mountain; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY geo_mountain (mountain, country, province) FROM stdin;
@@ -36719,7 +36719,7 @@ Pico de Agulhas Negras	BR	Rio de Janeiro
 
 
 --
--- Data for Name: geo_river; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: geo_river; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY geo_river (river, country, province) FROM stdin;
@@ -37578,7 +37578,7 @@ Murrumbidgee River	AUS	Australia Capital Territory
 
 
 --
--- Data for Name: geo_sea; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: geo_sea; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY geo_sea (sea, country, province) FROM stdin;
@@ -38321,7 +38321,7 @@ Sulawesi Sea	RP	Philippines
 
 
 --
--- Data for Name: geo_source; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: geo_source; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY geo_source (river, country, province) FROM stdin;
@@ -38548,7 +38548,7 @@ Murrumbidgee River	AUS	New South Wales
 
 
 --
--- Data for Name: island; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: island; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY island (name, islands, area, height, type, longitude, latitude) FROM stdin;
@@ -38832,7 +38832,7 @@ Te Waka-a-Maui (South Island)	New Zealand	151757	3754	\N	170.400000000000006	-44
 
 
 --
--- Data for Name: islandin; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: islandin; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY islandin (island, sea, lake, river) FROM stdin;
@@ -39189,7 +39189,7 @@ Isla da Ometepe	\N	Lake Nicaragua	\N
 
 
 --
--- Data for Name: ismember; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: ismember; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY ismember (country, organization, type) FROM stdin;
@@ -47205,7 +47205,7 @@ RSA	ZC	member
 
 
 --
--- Data for Name: lake; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: lake; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY lake (name, area, depth, altitude, type, river, longitude, latitude) FROM stdin;
@@ -47343,7 +47343,7 @@ Lake Hume	202	\N	\N	\N	Murray River	147	-36.1000000000000014
 
 
 --
--- Data for Name: language; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: language; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY language (country, name, percentage) FROM stdin;
@@ -47495,7 +47495,7 @@ STP	Portuguese	100
 
 
 --
--- Data for Name: located; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: located; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY located (city, province, country, river, lake, sea) FROM stdin;
@@ -48360,7 +48360,7 @@ Victoria	Seychelles	SY	\N	\N	Indian Ocean
 
 
 --
--- Data for Name: locatedon; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: locatedon; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY locatedon (city, province, country, island) FROM stdin;
@@ -48802,7 +48802,7 @@ Victoria	Seychelles	SY	Mahe
 
 
 --
--- Data for Name: mergeswith; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: mergeswith; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY mergeswith (sea1, sea2) FROM stdin;
@@ -48864,7 +48864,7 @@ Sulawesi Sea	Sunda Sea
 
 
 --
--- Data for Name: mountain; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: mountain; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY mountain (name, mountains, height, type, longitude, latitude) FROM stdin;
@@ -49110,7 +49110,7 @@ Pico de Agulhas Negras	Brazilian Highlands	2791	\N	-44.6499999999999986	-22.3999
 
 
 --
--- Data for Name: mountainonisland; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: mountainonisland; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY mountainonisland (mountain, island) FROM stdin;
@@ -49185,7 +49185,7 @@ Pelee	Martinique
 
 
 --
--- Data for Name: organization; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: organization; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY organization (abbreviation, name, city, country, province, established) FROM stdin;
@@ -49346,7 +49346,7 @@ ZC	Zangger Committee	\N	\N	\N	\N
 
 
 --
--- Data for Name: politics; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: politics; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY politics (country, independence, dependent, government) FROM stdin;
@@ -49592,7 +49592,7 @@ SY	1976-06-29	\N	republic
 
 
 --
--- Data for Name: population; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: population; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY population (country, population_growth, infant_mortality) FROM stdin;
@@ -49838,7 +49838,7 @@ SY	0.760000000000000009	12.5
 
 
 --
--- Data for Name: province; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: province; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY province (name, country, population, area, capital, capprov) FROM stdin;
@@ -51296,7 +51296,7 @@ Seychelles	SY	77575	\N	Victoria	Seychelles
 
 
 --
--- Data for Name: religion; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: religion; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY religion (country, name, percentage) FROM stdin;
@@ -51758,7 +51758,7 @@ SY	Anglican	8
 
 
 --
--- Data for Name: river; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: river; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY river (name, river, lake, sea, length, sourcelongitude, sourcelatitude, mountains, sourcealtitude, estuarylongitude, estuarylatitude) FROM stdin;
@@ -51984,7 +51984,7 @@ Murrumbidgee River	Murray River	Lake Burley Griffin	\N	1579	148.5	-37	Snowy Moun
 
 
 --
--- Data for Name: sea; Type: TABLE DATA; Schema: public; Owner: schueler
+-- Data for Name: sea; Type: TABLE DATA; Schema: public; Owner: pgschueler
 --
 
 COPY sea (name, depth) FROM stdin;
@@ -52026,7 +52026,7 @@ Sulawesi Sea	6218
 
 
 --
--- Name: borderkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: borderkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY borders
@@ -52034,7 +52034,7 @@ ALTER TABLE ONLY borders
 
 
 --
--- Name: citykey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: citykey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY city
@@ -52042,7 +52042,7 @@ ALTER TABLE ONLY city
 
 
 --
--- Name: continentkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: continentkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY continent
@@ -52050,7 +52050,7 @@ ALTER TABLE ONLY continent
 
 
 --
--- Name: country_name_key; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: country_name_key; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY country
@@ -52058,7 +52058,7 @@ ALTER TABLE ONLY country
 
 
 --
--- Name: countrykey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: countrykey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY country
@@ -52066,7 +52066,7 @@ ALTER TABLE ONLY country
 
 
 --
--- Name: desertkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: desertkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY desert
@@ -52074,7 +52074,7 @@ ALTER TABLE ONLY desert
 
 
 --
--- Name: economykey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: economykey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY economy
@@ -52082,7 +52082,7 @@ ALTER TABLE ONLY economy
 
 
 --
--- Name: employees_pkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: employees_pkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY employees
@@ -52090,7 +52090,7 @@ ALTER TABLE ONLY employees
 
 
 --
--- Name: encompasseskey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: encompasseskey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY encompasses
@@ -52098,7 +52098,7 @@ ALTER TABLE ONLY encompasses
 
 
 --
--- Name: ethnickey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: ethnickey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY ethnicgroup
@@ -52106,7 +52106,7 @@ ALTER TABLE ONLY ethnicgroup
 
 
 --
--- Name: gdesertkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: gdesertkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY geo_desert
@@ -52114,7 +52114,7 @@ ALTER TABLE ONLY geo_desert
 
 
 --
--- Name: gestuarykey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: gestuarykey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY geo_estuary
@@ -52122,7 +52122,7 @@ ALTER TABLE ONLY geo_estuary
 
 
 --
--- Name: gislandkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: gislandkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY geo_island
@@ -52130,7 +52130,7 @@ ALTER TABLE ONLY geo_island
 
 
 --
--- Name: glakekey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: glakekey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY geo_lake
@@ -52138,7 +52138,7 @@ ALTER TABLE ONLY geo_lake
 
 
 --
--- Name: gmountainkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: gmountainkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY geo_mountain
@@ -52146,7 +52146,7 @@ ALTER TABLE ONLY geo_mountain
 
 
 --
--- Name: griverkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: griverkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY geo_river
@@ -52154,7 +52154,7 @@ ALTER TABLE ONLY geo_river
 
 
 --
--- Name: gseakey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: gseakey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY geo_sea
@@ -52162,7 +52162,7 @@ ALTER TABLE ONLY geo_sea
 
 
 --
--- Name: gsourcekey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: gsourcekey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY geo_source
@@ -52170,7 +52170,7 @@ ALTER TABLE ONLY geo_source
 
 
 --
--- Name: islandkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: islandkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY island
@@ -52178,7 +52178,7 @@ ALTER TABLE ONLY island
 
 
 --
--- Name: lakekey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: lakekey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY lake
@@ -52186,7 +52186,7 @@ ALTER TABLE ONLY lake
 
 
 --
--- Name: languagekey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: languagekey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY language
@@ -52194,7 +52194,7 @@ ALTER TABLE ONLY language
 
 
 --
--- Name: locatedonkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: locatedonkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY locatedon
@@ -52202,7 +52202,7 @@ ALTER TABLE ONLY locatedon
 
 
 --
--- Name: memberkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: memberkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY ismember
@@ -52210,7 +52210,7 @@ ALTER TABLE ONLY ismember
 
 
 --
--- Name: mergeswithkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: mergeswithkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY mergeswith
@@ -52218,7 +52218,7 @@ ALTER TABLE ONLY mergeswith
 
 
 --
--- Name: mntislkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: mntislkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY mountainonisland
@@ -52226,7 +52226,7 @@ ALTER TABLE ONLY mountainonisland
 
 
 --
--- Name: mountainkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: mountainkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY mountain
@@ -52234,7 +52234,7 @@ ALTER TABLE ONLY mountain
 
 
 --
--- Name: organization_pkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: organization_pkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY organization
@@ -52242,7 +52242,7 @@ ALTER TABLE ONLY organization
 
 
 --
--- Name: orgnameunique; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: orgnameunique; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY organization
@@ -52250,7 +52250,7 @@ ALTER TABLE ONLY organization
 
 
 --
--- Name: politicskey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: politicskey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY politics
@@ -52258,7 +52258,7 @@ ALTER TABLE ONLY politics
 
 
 --
--- Name: popkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: popkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY population
@@ -52266,7 +52266,7 @@ ALTER TABLE ONLY population
 
 
 --
--- Name: prkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: prkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY province
@@ -52274,7 +52274,7 @@ ALTER TABLE ONLY province
 
 
 --
--- Name: religionkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: religionkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY religion
@@ -52282,7 +52282,7 @@ ALTER TABLE ONLY religion
 
 
 --
--- Name: riverkey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: riverkey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY river
@@ -52290,7 +52290,7 @@ ALTER TABLE ONLY river
 
 
 --
--- Name: seakey; Type: CONSTRAINT; Schema: public; Owner: schueler; Tablespace: 
+-- Name: seakey; Type: CONSTRAINT; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 ALTER TABLE ONLY sea
@@ -52298,14 +52298,14 @@ ALTER TABLE ONLY sea
 
 
 --
--- Name: emp_email; Type: INDEX; Schema: public; Owner: schueler; Tablespace: 
+-- Name: emp_email; Type: INDEX; Schema: public; Owner: pgschueler; Tablespace: 
 --
 
 CREATE UNIQUE INDEX emp_email ON employees USING btree (email);
 
 
 --
--- Name: employees_country_fkey; Type: FK CONSTRAINT; Schema: public; Owner: schueler
+-- Name: employees_country_fkey; Type: FK CONSTRAINT; Schema: public; Owner: pgschueler
 --
 
 ALTER TABLE ONLY employees
@@ -52313,7 +52313,7 @@ ALTER TABLE ONLY employees
 
 
 --
--- Name: employees_country_fkey1; Type: FK CONSTRAINT; Schema: public; Owner: schueler
+-- Name: employees_country_fkey1; Type: FK CONSTRAINT; Schema: public; Owner: pgschueler
 --
 
 ALTER TABLE ONLY employees
