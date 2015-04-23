@@ -118,11 +118,15 @@ public class databaseConn {
 		try {
 
 			conn = DriverManager.getConnection(url, username, password);
-			System.out.println("DB-Verbindung aufgebaut!");
-
+			System.out.println("DB-Verbindung aufgebaut!");	
+			
 			System.out.println("Creating statement...\n");
 			stmt = conn.createStatement();
+			System.out.println("Starts transaction");
+			//stmt.execute("BEGIN;");
 			rs = stmt.executeQuery(select);
+			System.out.println("Commit");
+			//stmt.execute("COMMIT;");
 
 		} catch (SQLException e) {
 			System.out
