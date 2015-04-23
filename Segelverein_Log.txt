@@ -1,3 +1,39 @@
+commit 9cb0f0b9408bff2dc9b526d50a4669ca27ce6ed9
+Author: mweinberger-tgm <mweinberger@student.tgm.ac.at>
+Date:   Wed Apr 22 22:27:49 2015 +0200
+
+    Akutalisierte Doku, neue gitignore
+
+commit e82d0b66009ed4a81b7894c7e7260fe41dba2cc5
+Author: mweinberger-tgm <mweinberger@student.tgm.ac.at>
+Date:   Thu Apr 23 00:10:43 2015 +0200
+
+    ~
+
+commit 1d938596ab2e095d07b0831e7c9b5b890f4cfb37
+Author: mweinberger-tgm <mweinberger@student.tgm.ac.at>
+Date:   Tue Mar 31 16:30:21 2015 +0200
+
+    Quellen eingefügt
+
+commit ea214af6a9ddb77e3733e7edb49e9b5ee4038ecf
+Author: mweinberger-tgm <mweinberger@student.tgm.ac.at>
+Date:   Sun Mar 22 19:17:28 2015 +0100
+
+    Neue Struktur
+
+commit adce13423388c277780ac7e5692918b7caa29539
+Author: mweinberger-tgm <mweinberger@student.tgm.ac.at>
+Date:   Sun Mar 22 17:55:50 2015 +0100
+
+    ~
+
+commit f046f16d20b3f3c9a54dd82ef73d70b1ad93df24
+Author: mweinberger-tgm <mweinberger@student.tgm.ac.at>
+Date:   Sun Mar 22 17:54:16 2015 +0100
+
+    Neuer Log, neue Doku
+
 commit d86dec73c652bd2ce02299307951d12308f9006a
 Author: mweinberger-tgm <mweinberger@student.tgm.ac.at>
 Date:   Sun Mar 22 17:35:31 2015 +0100
